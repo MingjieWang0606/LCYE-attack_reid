@@ -3,18 +3,6 @@
 
 Existing adversarial attack methods mainly focus on generating attack samples via the misclassification supervision feedback of victim models (VM), while little attention is paid to what the VM really believes. This paper aims to generate realistic attack samples of person re-identification (ReID) by reading enemy's mind(VM). Three inherent benefits could be uncovered: (1) Directly leveraging VM's knowledge to attack is transferable to test set in open-set ReID. (2) Cheating the belief of VM could mislead it easier. (3) Since VM only remembers the clean images, cheating their minds could boost the attack image generation to be realistic and undetectable. However, how to read VM's mind and then cheat it is intractable. In this paper, we propose a novel inconspicuous and controllable ReID attack baseline, LCYE Look Closer to Your Enemy, to generate adversarial query images.  Concretely, LCYE first distills VM's knowledge via teacher-student memory mimicking in the proxy task. Then this knowledge prior acts as an explicit cipher conveying what is essential and realistic, believed by VM, for accurate adversarial misleading. Besides, benefiting from the multiple opposing task framework of LCYE, we further investigate the interpretability and generalization of ReID models from the view of the adversarial attack, including cross-domain adaption, cross-model consensus, and online learning process. Extensive experiments on four ReID benchmarks show that our method outperforms other state-of-the-art attackers with a large margin in white-box, black-box, and target attacks. 
 
-# Reference
-
-If you are interested in our work, please consider citing our paper.
-```
-@InProceedings{Wang_2020_CVPR,
-author = {Wang, Hongjun and Wang, Guangrun and Li, Ya and Zhang, Dongyu and Lin, Liang},
-title = {Transferable, Controllable, and Inconspicuous Adversarial Attacks on Person Re-identification With Deep Mis-Ranking},
-booktitle = {IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
-month = {June},
-year = {2020}
-} 
-```
 
 # Prerequisites
 * Python2 / Python3
@@ -152,18 +140,25 @@ python train.py \
   --epoch=40
 ```
 
-# Results
-
-<p align="center">
-    <img src="images/results.PNG" width="450"\>
-</p>
-
 
 # Reminders
 
 1. If you are using your *own* trained ReID models (no matter whether they are customized), be careful about the name of variables and properly change or hold Line 38–53 in `__init__.py` (adaptation to early Pytorch0.3 trained models).
 2. You may notice some arguments and codes involve the attribute information, if you are interested in that you can easily find and download the extra attribute files about Market1501 or DukeMTMC. We have conducted some related experiments about attribute attack but it is *not* the main content of this paper so I delete that part of code.
 
+
+# Reference
+
+If you are interested in our work, please consider citing our paper.
+```
+@InProceedings{Wang_2020_CVPR,
+author = {Wang, Hongjun and Wang, Guangrun and Li, Ya and Zhang, Dongyu and Lin, Liang},
+title = {Transferable, Controllable, and Inconspicuous Adversarial Attacks on Person Re-identification With Deep Mis-Ranking},
+booktitle = {IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+month = {June},
+year = {2020}
+} 
+```
 
 # Acknowledgements
 Thanks for the following excellent works:
