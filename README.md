@@ -147,18 +147,6 @@ python train.py \
 2. You may notice some arguments and codes involve the attribute information, if you are interested in that you can easily find and download the extra attribute files about Market1501 or DukeMTMC. We have conducted some related experiments about attribute attack but it is *not* the main content of this paper so I delete that part of code.
 
 
-# Reference
-
-If you are interested in our work, please consider citing our paper.
-```
-@InProceedings{Wang_2020_CVPR,
-author = {Wang, Hongjun and Wang, Guangrun and Li, Ya and Zhang, Dongyu and Lin, Liang},
-title = {Transferable, Controllable, and Inconspicuous Adversarial Attacks on Person Re-identification With Deep Mis-Ranking},
-booktitle = {IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
-month = {June},
-year = {2020}
-} 
-```
 
 # Acknowledgements
 Thanks for the following excellent works:
